@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Your Templates</h1>
+    <ul>
+        {% for template in templates %}
+        <li>
+            Template Name: {{ template.name }}<br>
+            Category: {{ template.category }}<br>
+            Creator: {{ template.creator_name }}<br>
+            <a href="{{ url_for('uploaded_file', filename=template.filename) }}" target="_blank">View Template</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/upload-form">Upload a Template</a>
+</body>
+</html>
+

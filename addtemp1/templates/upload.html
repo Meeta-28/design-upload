@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Template</title>
+</head>
+<body>
+    <h1>Upload a Template</h1>
+    <form action="/upload-form" method="post" enctype="multipart/form-data">
+        <label for="creator_name">Your Name:</label>
+        <input type="text" name="creator_name" required><br>
+    
+        <label for="category">Category:</label>
+        <input type="text" name="category" required><br>
+    
+        <label for="file">Select a file:</label>
+<input type="file" name="file" accept=".txt, .pdf, .png, .jpg, .jpeg, .gif, .docx" required><br>
+
+    
+        <input type="submit" value="Upload">
+    </form>
+    
+    <a href="/">Back to Home</a>
+</body>
+</html>
